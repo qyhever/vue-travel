@@ -55,10 +55,11 @@
 	.icon-list >>> .swiper-container
 		height: 0
 		padding-bottom: 50%
-// .icon-list
-// 	height: 0
-// 	padding-bottom: 50%
-// 	overflow: hidden
+.icon-list
+	// height: 0
+	// padding-bottom: 50%
+	// overflow: hidden
+	margin-top: rem(10)
 	.icon-item
 		position: relative
 		float: left
