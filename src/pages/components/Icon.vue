@@ -18,18 +18,10 @@
 </template>
 
 <script>
-	let desc = '热门景点'
-	let imgUrl = 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png'
-	let iconList = []
-	for (let i = 0; i < 9; i++) {
-		iconList.push({id: i, imgUrl, desc})
-	}
 	export default {
 		name: 'HomeIcon',
-		data () {
-			return {
-				iconList: iconList
-			}
+		props: {
+			iconList: Array
 		},
 		computed: {
 			pages() {
@@ -43,9 +35,6 @@
 				})
 				return pages
 			}
-		},
-		created() {
-			
 		}
 	}
 </script>

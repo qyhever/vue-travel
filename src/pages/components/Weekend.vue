@@ -2,7 +2,7 @@
 	<div>
 		<div class="recommend-title">周末去哪儿</div>
 		<ul class="recommend-list">
-			<li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+			<li class="item border-bottom" v-for="item in weekendList" :key="item.id">
 				<div class="img-wrapper">
 					<img :src="item.imgUrl" alt="" class="img">
 				</div>
@@ -16,20 +16,10 @@
 </template>
 
 <script>
-	let imgUrl = 'http://img1.qunarzz.com/sight/p0/1505/bb/bb978d0b35e4965c.water.jpg_200x200_d705f205.jpg'
-	let title = '大连圣亚海洋世界'
-	let desc = '浪漫大连首站，浪漫的海洋主题乐园'
-	let recommendList = []
-	for (let i = 0; i < 3; i++) {
-		recommendList.push({id: i, imgUrl, title, desc})
-	}
-	console.log(recommendList)
 	export default {
 		name: 'HomeWeekend',
-		data () {
-			return {
-				recommendList: recommendList
-			}
+		props: {
+			weekendList: Array
 		}
 	}
 </script>
@@ -37,14 +27,13 @@
 <style scoped lang="stylus">
 	@import '~@/assets/style/mixin.styl'
 	.recommend-title
-		margin-top: rem(20)
 		line-height: rem(80)
 		background-color: #eee
 		text-indent: rem(20)
 		
 	.img-wrapper
 		height: 0
-		padding-bottom: 33.9%
+		padding-bottom: 37.1%
 		overflow: hidden
 		.img
 			width: 100%

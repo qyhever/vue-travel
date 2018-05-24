@@ -15,20 +15,10 @@
 </template>
 
 <script>
-	let imgUrl = 'http://img1.qunarzz.com/sight/p0/1505/bb/bb978d0b35e4965c.water.jpg_200x200_d705f205.jpg'
-	let title = '大连圣亚海洋世界'
-	let desc = '浪漫大连首站，浪漫的海洋主题乐园'
-	let recommendList = []
-	for (let i = 0; i < 3; i++) {
-		recommendList.push({id: i, imgUrl, title, desc})
-	}
-	console.log(recommendList)
 	export default {
 		name: 'HomeRecommend',
-		data () {
-			return {
-				recommendList: recommendList
-			}
+		props: {
+			recommendList: Array
 		}
 	}
 </script>
