@@ -15,6 +15,7 @@
   import HomeWeekend from './components/Weekend'
 
   import axios from 'axios'
+  import { mapState } from 'vuex'
   export default {
     name: 'Home',
     components: {
@@ -29,15 +30,27 @@
         swiperList: [],
         iconList: [],
         recommendList: [],
-        weekendList: []
+        weekendList: [],
+        lastCity: ''
       }
     },
+    computed: {
+      ...mapState(['city'])
+    },
     mounted() {
+      this.lastCity = this.city
       this.getHomeInfo()
+    },
+    // 当使用keep-alive时，会触发这个钩子
+    activated() {
+      if (this.lastCity !== this.city) {
+        this.lastCity = this.city
+        this.getHomeInfo()
+      }
     },
     methods: {
       getHomeInfo() {
-        axios.get('/api/index.json').then(res => {
+        axios.get('/api/index.json?city=' + this.city).then(res => {
           res = res.data
           if (res.ret && res.data) {
             const data = res.data
