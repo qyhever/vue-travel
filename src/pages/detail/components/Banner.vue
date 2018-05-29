@@ -1,12 +1,12 @@
 <template>
 	<div>
 		<div class="banner" @click="handleBannerClick">
-			<img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1705/99/99cad7081abb9771a3.img.jpg_600x330_25e27e6d.jpg" alt="">
+			<img class="banner-img" :src="bannerImg" alt="">
 			<div class="banner-info">
-				<p class="banner-title">武汉海昌极地海洋世界</p>
+				<p class="banner-title">{{sightName}}</p>
 				<p class="banner-number">
 					<i class="iconfont icon-tupian"></i>
-					39
+					{{bannerImgs.length}}
 				</p>
 			</div>
 		</div>
@@ -20,6 +20,11 @@
 		name: 'DetailBanner',
 		components: {
 			CommonGallery
+		},
+		props: {
+			sightName: String,
+			bannerImg: String,
+			bannerImgs: Array
 		},
 		data () {
 			return {

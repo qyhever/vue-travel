@@ -6,7 +6,7 @@
 			v-show="showAbs">
 			<i class="iconfont icon-fanhui"></i>
 		</router-link>
-		<div class="header-fixed" v-show="!showAbs" :style="{opacity: opacityRate}">
+		<div class="header-fixed" v-show="!showAbs" :style="styleObject">
 			景点详情
 			<router-link to="/">
 				<div class="header-fixed-back">
@@ -23,19 +23,24 @@
 		data () {
 			return {
 				showAbs: true,
-				opacityRate: 0
+				styleObject: {
+					opacity: 0
+				}
 			}
 		},
 		activated() {
 			window.addEventListener('scroll', this.handleScroll)
 		},
+		deactivated() {
+			window.removeEventListener('scroll', this.handleScroll)
+		},
 		methods: {
 			handleScroll() {
 				const top = document.documentElement.scrollTop
 				if (top > 60) {
-					let opacityRate = top / 140
-					opacityRate = opacityRate > 1 ? 1 : opacityRate
-					this.opacityRate = opacityRate
+					let opacity = top / 140
+					opacity = opacity > 1 ? 1 : opacity
+					this.styleObject = { opacity }
 					this.showAbs = false
 				} else {
 					this.showAbs = true
@@ -63,6 +68,7 @@
 			color: #fff
 			
 	.header-fixed
+		z-index: 2
 		position: fixed
 		top: 0
 		left: 0
