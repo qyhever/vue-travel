@@ -3,7 +3,7 @@
 		<div class="wrapper">
 			<swiper :options="swiperOptions">
 				<swiper-slide>
-					<img class="gallery-img" src="http://img1.qunarzz.com/sight/p0/1607/fa/fa21fe6657005e88b4.water.jpg_350x240_a70b8cad.jpg" alt="">
+					<img class="gallery-img" src="http://img1.qunarzz.com/sight/p0/1705/57/5708cf22747bca9ba3.img.png_r_800x800_1c9bb1a5.png" alt="">
 				</swiper-slide>
 				<swiper-slide>
 					<img class="gallery-img" src="http://img1.qunarzz.com/sight/p0/1412/d5/4252aaf31a6a659c4014fd97e35edc73.water.jpg_350x240_92f372e1.jpg" alt="">
@@ -59,8 +59,8 @@
 			width: 100%
 			height: 0
 			padding-bottom: 100%
-			// .gallery-img
-			// 	width: 100%
+			.gallery-img
+				width: 100%
 			.swiper-pagination
 				bottom: rem(-100)
 				color: #fff
