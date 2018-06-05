@@ -14,7 +14,7 @@
   import HomeRecommend from './components/Recommend'
   import HomeWeekend from './components/Weekend'
 
-  import axios from 'axios'
+  import axios from '@/utils/axios'
   import { mapState } from 'vuex'
   export default {
     name: 'Home',

@@ -20,7 +20,7 @@
 	import CitySearch from './components/Search'
 	import CityList from './components/List'
 	import CityAlphabet from './components/Alphabet'
-	import axios from 'axios'
+	import axios from '@/utils/axios'
 	export default {
 		name: 'City',
 		components: {

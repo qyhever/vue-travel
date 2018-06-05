@@ -16,7 +16,7 @@
 	import DetailBanner from './components/Banner'
 	import DetailHeader from './components/Header'
 	import DetailList from './components/List'
-	import axios from 'axios'
+	import axios from '@/utils/axios'
 	export default {
 		name: 'Detail',
 		components: {
