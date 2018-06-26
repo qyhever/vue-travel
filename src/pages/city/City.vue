@@ -12,6 +12,8 @@
 			:cities="cities"
 			@change="handleLetterChange">
 		</city-alphabet>
+
+		<div class="center" v-show="centerAlphabet">{{letter}}</div>
 	</div>
 </template>
 
@@ -33,7 +35,16 @@
 			return {
 				cities: {},
 				hotCities: [],
-				letter: ''
+				letter: '',
+				centerAlphabet: false
+			}
+		},
+		watch: {
+			letter(val) {
+				this.centerAlphabet = true
+				setTimeout(() => {
+					this.centerAlphabet = false
+				}, 2000)
 			}
 		},
 		mounted() {
@@ -57,6 +68,20 @@
 	}
 </script>
 
-<style scoped>
-	
+<style scoped lang="stylus">
+	@import '~@/assets/style/mixin.styl'
+	.center
+		z-index: 9
+		position: fixed
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: rem(100)
+		height: rem(100)
+		background-color: rgba(0, 0, 0, .3)
+		border-radius: 6px
+		line-height: rem(100)
+		text-align: center
+		color: #fff
+		font-size: 16px
 </style>

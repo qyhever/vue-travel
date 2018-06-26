@@ -18,6 +18,7 @@
 
 <script>
 	import { mapState } from 'vuex'
+	import AMap from 'AMap'
 	export default {
 		name: 'HomeHeader',
 		data () {
@@ -30,6 +31,26 @@
 		},
 		created() {
 			
+		},
+		mounted() {
+			this.getLocalCity()
+		},
+		methods: {
+			getLocalCity() {
+				const map = new AMap.Map('iCenter')
+				map.plugin('AMap.Geolocation', () => {
+					const geolocation = new AMap.Geolocation({
+						timeout: 10000  // 超过10秒后停止定位，默认：无穷大
+					})
+					geolocation.getCurrentPosition()
+					AMap.event.addListener(geolocation, 'complete', data => {
+						this.$store.commit('changeCity', data.addressComponent.city.slice(0, -1))
+					})
+					AMap.event.addListener(geolocation, 'error', e => {
+						alert('定位失败')
+					})
+				})
+			}
 		}
 	}
 </script>
