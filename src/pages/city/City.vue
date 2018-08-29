@@ -44,7 +44,7 @@
 				this.centerAlphabet = true
 				setTimeout(() => {
 					this.centerAlphabet = false
-				}, 2000)
+				}, 1000)
 			}
 		},
 		mounted() {

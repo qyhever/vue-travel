@@ -1,8 +1,8 @@
 # vue-travel
 
-> A Vue.js project
+> 一个 vue-cli搭建的vue全家桶小型项目，适合入门vue
 
-## Build Setup
+### 启动项目
 
 ``` bash
 # install dependencies
@@ -13,9 +13,39 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+### 项目目录
+
+```
+├─build    
+├─config    
+├─src
+│  │  App.vue
+│  │  main.js
+│  ├─assets		// 静态资源       
+│  ├─common		// 公共组件    
+│  ├─pages		// 页面组件   
+│  ├─router		// 路由
+│  ├─store		// vuex
+│  └─utils		// 常用工具函数
+│          
+└─static
+│  .babelrc
+│  .editorconfig
+│  .gitignore
+│  .postcssrc.js
+│  index.html
+│  list.txt
+│  package.json
+│  README.md
+```
+
+### 项目截图
+
+[项目地址](http://qyhever.com/vue-travel)
+
+![](./static/printscreen.gif)
+
