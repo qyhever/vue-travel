@@ -45,7 +45,7 @@ npm run build
 
 ### 项目截图
 
-[项目地址](http://qyhever.com/vue-travel)
+[项目地址](https://qyhever.top/vue-travel)
 
 ![](./static/printscreen.gif)
 
