@@ -3,7 +3,7 @@ import router from '@/router'
 import store from '@/store'
 
 axios.defaults.timeout = 5000
-// axios.defaults.baseURL = '/api'
+axios.defaults.baseURL = 'https://qyhever.com'
 
 let count = 0
 
