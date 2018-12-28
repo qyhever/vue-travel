@@ -50,7 +50,7 @@
     },
     methods: {
       getHomeInfo() {
-        axios.get('/api/index.json?city=' + this.city).then(res => {
+        axios.get('/mock/index.json?city=' + this.city).then(res => {
           res = res.data
           if (res.ret && res.data) {
             const data = res.data

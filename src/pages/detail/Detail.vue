@@ -38,7 +38,7 @@
 		methods: {
 			getDetailInfo() {
 				const id = this.$route.params.id
-				axios.get(`/api/detail.json?id=${id}`).then(res => {
+				axios.get(`/mock/detail.json?id=${id}`).then(res => {
 					res = res.data
 					if (res.ret && res.data) {
 						const data = res.data
