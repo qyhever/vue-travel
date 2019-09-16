@@ -13,3 +13,10 @@ before_install:
 
 script:
  - npm run build
+
+ notifications:
+  email:
+    recipients:
+      - 15927700473@163.com
+    on_success: never # default: change
+    on_failure: always # default: always

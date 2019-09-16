@@ -25,6 +25,12 @@ Raven.config('https://3695b4a5dfde44599bd5bdf2775c735e@sentry.io/1444638', {
   debug: true
 }).addPlugin(RavenVue, Vue).install()
 
+try {
+  const c = a + b
+} catch (err) {
+  Sentry.captureException(err)
+}
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
