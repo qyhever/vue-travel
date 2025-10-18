@@ -11,6 +11,7 @@ const Home = () => import('@/pages/home/Home')
 const City = () => import('@/pages/city/City')
 const Detail = () => import('@/pages/detail/Detail')
 export default new Router({
+  base: '/vue-travel/',
   mode: 'history',
 	scrollBehavior (to, from, savedPosition) {
 	  return { x: 0, y: 0 }
