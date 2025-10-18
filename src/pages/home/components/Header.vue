@@ -18,7 +18,7 @@
 
 <script>
 	import { mapState } from 'vuex'
-	import AMap from 'AMap'
+	// import AMap from 'AMap'
 	export default {
 		name: 'HomeHeader',
 		data () {
@@ -33,7 +33,7 @@
 
 		},
 		mounted() {
-			this.getLocalCity()
+			// this.getLocalCity()
 		},
 		methods: {
 			getLocalCity() {

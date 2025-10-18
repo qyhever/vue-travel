@@ -4,8 +4,8 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import Raven from 'raven-js'
-import RavenVue from 'raven-js/plugins/vue'
+// import Raven from 'raven-js'
+// import RavenVue from 'raven-js/plugins/vue'
 
 Vue.config.productionTip = false
 
@@ -20,16 +20,16 @@ import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 Vue.use(VueAwesomeSwiper)
 
-Raven.config('https://3695b4a5dfde44599bd5bdf2775c735e@sentry.io/1444638', {
-  release: '3.27.0',
-  debug: true
-}).addPlugin(RavenVue, Vue).install()
+// Raven.config('https://3695b4a5dfde44599bd5bdf2775c735e@sentry.io/1444638', {
+//   release: '3.27.0',
+//   debug: true
+// }).addPlugin(RavenVue, Vue).install()
 
-try {
-  const c = a + b
-} catch (err) {
-  Raven.captureException(err)
-}
+// try {
+//   const c = a + b
+// } catch (err) {
+//   Raven.captureException(err)
+// }
 
 /* eslint-disable no-new */
 new Vue({
