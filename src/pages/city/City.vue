@@ -52,7 +52,7 @@
 		},
 		methods: {
 			getCityInfo() {
-				axios.get('/mock/city.json').then(res => {
+				axios.get('/city.json').then(res => {
 					res = res.data
 					if (res.ret && res.data) {
 						const data = res.data

@@ -38,13 +38,17 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+  #app {
+    max-width: 750px
+    margin: 0 auto
+  }
 	// .slide-left-enter, .slide-right-leave-active
 	// 	transform: translate(100%, 0)
 	// 	transition: all 0.4s ease-in-out
 	// .slide-left-leave-active, .slide-right-enter
 	// 	transform: translate(-100%, 0)
 	// 	transition: all 0.4s ease-in-out
- 
+
   .loading-container {
     z-index: 2
     position: fixed
@@ -54,5 +58,5 @@ export default {
     bottom: 0
     background: transparent
   }
-    
+
 </style>

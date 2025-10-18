@@ -30,7 +30,7 @@
 			...mapState(['city'])
 		},
 		created() {
-			
+
 		},
 		mounted() {
 			this.getLocalCity()
@@ -44,10 +44,13 @@
 					})
 					geolocation.getCurrentPosition()
 					AMap.event.addListener(geolocation, 'complete', data => {
-						this.$store.commit('changeCity', data.addressComponent.city.slice(0, -1))
+            console.log('AMap.Geolocation data: ', data);
+            if (data.addressComponent) {
+              this.$store.commit('changeCity', data.addressComponent.city.slice(0, -1))
+            }
 					})
-					AMap.event.addListener(geolocation, 'error', e => {
-						alert('定位失败')
+					AMap.event.addListener(geolocation, 'error', err => {
+            console.log('AMap.Geolocation error: ', err);
 					})
 				})
 			}
