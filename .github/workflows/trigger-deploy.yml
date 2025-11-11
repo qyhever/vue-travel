@@ -42,3 +42,4 @@ jobs:
           key: ${{ secrets.SERVER_SSH_RSA }}
           source: "dist/**"
           target: "/usr/share/nginx/html/vue-travel"
+          strip_components: 1
